@@ -1,9 +1,9 @@
 # Datasets to test out, with their intended prediction
-# datasets = [[37, 37, 37, 38, 38, 38, 38, 37, 37, 37, 36, 36, 36, 37, 38, 40, 42, 44, 45, 45, 44, 43, 42, 41] ] # Schnectady Hourly forecast on 1/24/24 || For forecasting
-datasets = [[40], [42],[44],[46]] # Example data || For linear prediction || Target of 48
-datasets = [[31,38],[36,45],[36,43]] # Highs and lows from 1/24/24 to 1/26/24 || For non-linear prediciton || Target of 35,41 
+#datasets = [[37, 37, 37, 38, 38, 38, 38, 37, 37, 37, 36, 36, 36, 37, 38, 40, 42, 44, 45, 45, 44, 43, 42, 41] ] # Schnectady Hourly forecast on 1/24/24 || For forecasting
+#datasets = [[40], [42],[44],[46]] # Example data || For linear prediction || Target of 48
+#datasets = [[31,38],[36,45],[36,43]] # Highs and lows from 1/24/24 to 1/26/24 || For non-linear prediciton || Target of 35,41 
 datasets = [[1], [1], [2], [3], [5], [8], [13], [21]] # FIBONACCI SEQUENCE || For non-linear prediction || Target of 34
-datasets = [[1],[2],[4],[7]] # LAZY CATERER'S SEQUENCE || For non-linear prediction || Target of 11
+#datasets = [[1],[2],[4],[7]] # LAZY CATERER'S SEQUENCE || For non-linear prediction || Target of 11
 
 # Simple base functions
 def findavg(values):
@@ -165,7 +165,6 @@ def forecast(dataset):
         "degrees",
     )
     input("Enter key to return to home: ")
-    homescreen()
 
 # Home screen and user flow control
 def homescreen():
@@ -254,9 +253,6 @@ def createnewdataset(datasets, values):
 
 
 print("\n" * 100)
-print("Welcome to an interactive model of a Python program a Climatologist would use!")
+print("Welcome to an interactive model of a \nPython program a Climatologist would use!")
 
-while True:
-    if input("'S' to start: ") == "S":
-        homescreen()
-    break
+input("Enter key to start: ")
