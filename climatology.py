@@ -2,17 +2,11 @@
 # datasets = [[37, 37, 37, 38, 38, 38, 38, 37, 37, 37, 36, 36, 36, 37, 38, 40, 42, 44, 45, 45, 44, 43, 42, 41] ] # Schnectady Hourly forecast on 1/24/24 || For forecasting
 # datasets = [[40], [42],[44],[46]] # Example data || For linear prediction || Target of 48
 # datasets = [[31,38],[36,45],[36,43]] # Highs and lows from 1/24/24 to 1/26/24 || For non-linear prediciton || Target of 35,41
-datasets = [
-    [1],
-    [1],
-    [2],
-    [3],
-    [5],
-    [8],
-    [13],
-    [21],
-]  # FIBONACCI SEQUENCE || For non-linear prediction || Target of 34
+datasets = [[1],[1],[2],[3],[5],[8],[13],[21],]  # FIBONACCI SEQUENCE || For non-linear prediction || Target of 34
 # datasets = [[1],[2],[4],[7]] # LAZY CATERER'S SEQUENCE || For non-linear prediction || Target of 11
+
+FACTOR = 1.98
+# Controls non-linear algorithm prediction confidence, standard value of 2
 
 
 # Simple base functions
@@ -137,11 +131,11 @@ def predict(datasets):
                     larger * factor
                 )  # Applies non-linear difference
                 deviance = abs(
-                    round((larger * factor - larger * (factor + factor2) / 2))
+                    round((larger * factor - larger * (factor + factor2) / FACTOR))
                 )  # Finds predicted potential deviance from the prediction
                 weightedPercentage = deviance / (
-                    larger * factor *100
-                )  # Finds the percentage off the deviance is from the prediction
+                    larger * factor 
+                ) * 100  # Finds the percentage off the deviance is from the prediction
             deviances.append(deviance)
             weightedPercentages.append(weightedPercentage)
     else:
