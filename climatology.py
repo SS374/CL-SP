@@ -313,3 +313,4 @@ print(
 )
 
 input("Enter key to start: ")
+homescreen()
