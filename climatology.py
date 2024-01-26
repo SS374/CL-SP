@@ -140,7 +140,7 @@ def predict(datasets):
                     round((larger * factor - larger * (factor + factor2) / 2))
                 )  # Finds predicted potential deviance from the prediction
                 weightedPercentage = deviance / (
-                    larger * factor
+                    larger * factor *100
                 )  # Finds the percentage off the deviance is from the prediction
             deviances.append(deviance)
             weightedPercentages.append(weightedPercentage)
