@@ -115,8 +115,8 @@ def predict(datasets):
             larger = last_dataset[i]
             smaller1 = secondtl_dataset[i]
             smaller2 = thirdtl_dataset[i]
-            difference1 = abs(larger - smaller1)
-            difference2 = abs(smaller1 - smaller2)
+            difference1 = larger - smaller1
+            difference2 = smaller1 - smaller2
             factor = larger / smaller1
             factor2 = smaller1 / smaller2
 
@@ -127,7 +127,7 @@ def predict(datasets):
                 factor2 = 2 - factor2
 
             if (
-                difference1 == difference2
+                abs(difference1)== abs(difference2)
             ):  # Finds if differences between past datasets was linear
                 predictionlist[i] = larger + difference1  # Applies linear difference
                 deviance = 0
