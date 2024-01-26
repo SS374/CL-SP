@@ -5,7 +5,7 @@
 datasets = [[1],[1],[2],[3],[5],[8],[13],[21],]  # FIBONACCI SEQUENCE || For non-linear prediction || Target of 34
 # datasets = [[1],[2],[4],[7]] # LAZY CATERER'S SEQUENCE || For non-linear prediction || Target of 11
 
-FACTOR = 1.98
+FACTOR = 2
 # Controls non-linear algorithm prediction confidence, standard value of 2
 
 
